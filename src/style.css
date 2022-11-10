@@ -33,7 +33,7 @@ button:focus {
   height: 100%;
   z-index: 999999;
   background-color: #0c0513;
-  background-image: url(./Assets/pre.svg);
+  background-image: url(./assets/pre.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -62,13 +62,13 @@ button:focus {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgba(178, 121, 216, 0.959);
+  background: #bc335d;
   border-radius: 12px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(222, 130, 235, 0.911);
+  background: #bc335d;
   border-radius: 12px;
 }
 
@@ -76,17 +76,17 @@ button:focus {
 /* Navbar Section  */
 /* --------- */
 .sticky {
-  background-color: #1b1a2ea9 !important;
   transition: all 0.3s ease-out 0s !important;
   box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
   backdrop-filter: blur(15px) !important;
 }
 
 .navbar {
+  background-color: #1b1a2ea9 !important;
   position: fixed !important;
   transition: all 0.3s ease-out 0s !important;
   padding: 0.3rem 2rem !important;
-  font-size: 1.2rem !important;
+  font-size: 1rem !important;
 }
 
 .navbar-toggler {
@@ -97,7 +97,7 @@ button:focus {
 
 .navbar-toggler span {
   display: block !important;
-  background-color: #be50f4 !important;
+  background-color: #bc335d !important;
   height: 4px !important;
   width: 27px !important;
   margin-top: 5px !important;
@@ -140,23 +140,27 @@ button:focus {
   opacity: 0.9 !important;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .navbar {
-    padding: 1rem 2rem !important;
-    font-size: 1.4rem !important;
-    background-color: #181a27 !important;
+    background-color: #1b1a2ea9 !important;
   }
   .navbar-nav .nav-item a::after {
     display: none !important;
   }
 }
-.navbar-brand {
-  color: rgb(250, 250, 250) !important;
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 1rem 2rem !important;
+    font-size: 1.4rem !important;
+    background-color: #343744 !important;
+  }
 }
 
-.logo {
-  height: 1.4em !important;
-  width: 2.5em !important;
+.navbar-brand {
+  color: #bc335d !important;
+  text-shadow: 0 0 0.15em #000000;
+  font-size: 2em !important;
 }
 
 .navbar-nav .nav-link {
@@ -169,7 +173,7 @@ button:focus {
   padding: 0.8rem 1rem !important;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .nav-link {
     padding: 0.7rem 1rem !important;
   }
@@ -194,7 +198,7 @@ button:focus {
   height: 5px;
   width: 0;
   border-radius: 16px;
-  background: #c95bf5;
+  background: #bc335d;
   bottom: 1px;
   left: 0;
   z-index: -1;
@@ -208,66 +212,20 @@ button:focus {
 /* --------- */
 /* Home section */
 /* --------- */
-.wave {
-  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
-  animation-duration: 2.1s; /* Change to speed up or slow down */
-  animation-iteration-count: infinite; /* Never stop waving :) */
-  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
-  display: inline-block;
-}
-
-@keyframes wave-animation {
-  0% {
-    transform: rotate(0deg);
-  }
-  10% {
-    transform: rotate(14deg);
-  } /* The following five values can be played with to make the waving more or less extreme */
-  20% {
-    transform: rotate(-8deg);
-  }
-  30% {
-    transform: rotate(14deg);
-  }
-  40% {
-    transform: rotate(-4deg);
-  }
-  50% {
-    transform: rotate(10deg);
-  }
-  60% {
-    transform: rotate(0deg);
-  } /* Reset for the last half to pause */
-  100% {
-    transform: rotate(0deg);
-  }
-}
-#tsparticles {
-  position: fixed !important;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-  width: 100%;
-  height: 100%;
-}
-
-.home-header {
-  padding-top: 80px !important;
-}
-
 .home-section {
+  height: 100vh;
   position: relative;
   z-index: -1;
-  background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
-  background-position: top center;
+  background-image: url(./assets/home-bg.jpg);
+  background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
   padding-bottom: 30px !important;
   padding-top: 30px !important;
 }
 
 .home-content {
-  padding: 9rem 0 2rem !important;
   color: whitesmoke;
-  text-align: left;
 }
 
 .heading {
@@ -275,45 +233,105 @@ button:focus {
   padding-left: 50px !important;
 }
 
+.home-header {
+  position: absolute;
+  top: 50%;
+  right: 25%;
+}
+
 .heading-name {
+  text-align: right;
   font-size: 2.5em !important;
   padding-left: 45px !important;
 }
 
 .main-name {
-  color: #cd5ff8;
+  color: #ffffff;
+  text-shadow: 0 0 0.15em #bc335d;
+  filter: blur(0.007em);
 }
 
 .Typewriter__wrapper {
+  color: #ffffff;
+  text-shadow: 0 0 0.15em #bc335d;
+  filter: blur(0.007em);
   font-size: 2.2em !important;
-  color: #be6adf !important;
   font-weight: 600 !important;
 }
 .Typewriter__cursor {
-  font-size: 2.4em !important;
-  color: #b562d6 !important;
+  font-size: 2.5em !important;
+  color: #bc335d !important;
+}
+.typewriter {
+  padding-top: 40px;
+  text-align: right;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1500px) {
+  .heading-name {
+    font-size: 2.2em !important;
+  }
   .Typewriter__wrapper {
-    font-size: 1.4em !important;
-    font-weight: 500 !important;
-    position: absolute !important;
+    font-size: 2em !important;
   }
   .Typewriter__cursor {
-    display: none !important;
+    font-size: 2.2em !important;
+  }
+  .home-header {
+    right: 10%;
   }
 }
 
-.myAvtar {
-  justify-content: center !important;
-  padding-top: 9em !important;
+@media (max-width: 992px) {
+  .home-header {
+    right: 7%;
+  }
+  .heading-name {
+    font-size: 2em !important;
+  }
+  .Typewriter__wrapper {
+    font-size: 1.6em !important;
+  }
+  .Typewriter__cursor {
+    font-size: 1.8em !important;
+  }
 }
 
-@media (max-width: 767px) {
-  .myAvtar {
-    padding-top: 2em !important;
-    padding-bottom: 2em !important;
+@media (max-width: 768px) {
+  .home-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./assets/home-bg-tablet.jpg) !important;
+  }
+  .home-header {
+    position: static;
+  }
+  .heading-name {
+    padding: 0 !important;
+    font-size: 2.5em !important;
+    text-align: center;
+  }
+  .Typewriter__wrapper {
+    font-size: 2.2em !important;
+    font-weight: 600 !important;
+  }
+  .Typewriter__cursor {
+    font-size: 2.5em !important;
+  }
+  .typewriter {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-image: url(./assets/home-bg-mobile.jpg) !important;
+    margin-top: 100px;
   }
 }
 
@@ -402,7 +420,7 @@ button:focus {
 /* Footer */
 /* --------- */
 .footer {
-  background-color: rgb(10, 4, 22);
+  background-color: #343744;
   bottom: 0 !important;
   padding-top: 10px !important;
   padding-bottom: 8px !important ;
@@ -416,7 +434,7 @@ button:focus {
   text-align: center !important;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .footer-copywright {
     text-align: center !important;
   }
@@ -565,7 +583,7 @@ button:focus {
   transition: all 0.4s ease 0s !important;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .tech-icons {
     margin: 10px !important;
   }
@@ -593,7 +611,7 @@ button:focus {
   padding-left: 1px !important;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .about-img {
     padding-top: 0 !important;
   }
@@ -624,7 +642,7 @@ button:focus {
   padding-left: 80px !important;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .resume-left {
     padding-right: 15px !important;
     padding-left: 15px !important;
