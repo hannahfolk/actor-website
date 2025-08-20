@@ -1,8 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { AboutCard } from "./AboutCard";
 
-function About() {
+function Reel() {
   return (
     <Container
       fluid
@@ -21,7 +20,6 @@ function About() {
             <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
               A Mesh of Entertainment and Technology
             </h1>
-            <AboutCard />
           </Col>
         </Row>
       </Container>
@@ -29,4 +27,4 @@ function About() {
   );
 }
 
-export default About;
+export default Reel;

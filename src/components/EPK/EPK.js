@@ -1,15 +1,9 @@
-import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { AboutCard } from "./AboutCard";
 
 function About() {
   return (
-    <Container
-      fluid
-      className="about-section animate__animated animate__fadeIn animate__delay-1s"
-    >
-      <Container>
-        <Row style={{ justifyContent: "center", padding: "10px" }}>
+    <Container fluid>
+      {/* <Row style={{ justifyContent: "center", padding: "10px" }}>
           <Col md={5} className="about-img">
             <img
               src="./assets/about.jpg"
@@ -21,10 +15,9 @@ function About() {
             <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
               A Mesh of Entertainment and Technology
             </h1>
-            <AboutCard />
+            <Aboutcard />
           </Col>
-        </Row>
-      </Container>
+        </Row> */}
     </Container>
   );
 }

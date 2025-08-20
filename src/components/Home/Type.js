@@ -1,14 +1,16 @@
-import React from "react";
+import { useEffect } from "react";
 import Typewriter from "typewriter-effect";
 
 function Type() {
+  useEffect(() => {});
   return (
     <Typewriter
       options={{
-        strings: ["Actor", "Wushu Athlete", "Stuntwoman"],
+        strings: ["Martial Artist", "Actor"],
         autoStart: true,
         loop: true,
-        deleteSpeed: 50,
+        delay: 50,
+        deleteSpeed: 25,
       }}
     />
   );

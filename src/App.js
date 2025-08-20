@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
+
 import Preloader from "../src/components/Pre";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
+import EPK from "./components/EPK/EPK";
 import Images from "./components/Images/Images";
-import Reel from "./components/Reel/Reel";
-import Resume from "./components/Resume/ResumeNew";
+import Reels from "./components/Reels/Reels";
+import Resume from "./components/Resume/Resume";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer";
 import {
@@ -15,9 +17,11 @@ import {
   Navigate,
 } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
+import "react-awesome-slider/dist/styles.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "react-awesome-slider/dist/custom-animations/cube-animation.css";
 import "./style.css";
 import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   const [load, upadateLoad] = useState(true);
@@ -39,8 +43,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/epk" element={<EPK />} />
           <Route path="/images" element={<Images />} />
-          <Route path="/reel" element={<Reel />} />
+          <Route path="/reels" element={<Reels />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Navigate to="/" />} />
